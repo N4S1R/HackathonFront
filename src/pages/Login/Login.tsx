@@ -8,10 +8,11 @@ import { setUser } from '../../store/reducers/user/userSlice';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import useAuth from '../../hooks/useAuth';
-
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { IconButton } from '@mui/material';
 
 const LoginS = styled.div`
-          width: 100%;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -53,6 +54,7 @@ const Login = () => {
 
     return (
         <LoginS>
+            <IconButton onClick={() => navigate("/")}><ArrowBackIcon /></IconButton>
             <h2>Войти аккаунт в MVC</h2>
             <Input type='email' value={email} onChange={e => setEmail(e.target.value)} placeholder='введите email' />
             <Input

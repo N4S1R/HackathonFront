@@ -45,13 +45,14 @@ function App() {
                     <Route path='login' element={<Login />}/>
                 </Routes>
             </BrowserRouter>
-            {isOpen && (
-                <Modal>
-                    
-                </Modal>
-            )}
         </div>
     );
 }
 
 export default App;
+
+
+
+// Для нашего веб приложения мы используем такоей стек:
+// 
+// 

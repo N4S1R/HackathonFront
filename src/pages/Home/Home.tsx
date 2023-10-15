@@ -34,27 +34,14 @@ const Home = () => {
 
     const [stepsCount, setStepCount] = useState(1);
     if(isLoading) {
-        return <h2>Насир кроос</h2>
+        return <h2>Loading...</h2>
     }
 
     console.log(data)
 
     return (
         <div>
-            {isOpen && (
-                <Modal>
-                    <div>
-                        <h3>Регистрация машины</h3>
-                        <ProgressS>
-                            <LinearProgress determinate value={1 * 33.3} />
-                        </ProgressS>
-                        <CreateFormS>
-                            <Input />
-                        </CreateFormS>
-                        <Button variant='outlined'>Далее</Button>
-                    </div>
-                </Modal>
-            )}
+
             <ProductS>
                 {data?.map(product => (
                     <ProductCard

@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import { useGetCarByIdQuery } from '../../store/reducers/Modal/carsApi/cars';
 import styled from 'styled-components';
-import { Rating } from '@mui/material';
+import { Button, Rating } from '@mui/material';
 
 const ProductPageS = styled.div`
     box-shadow: 9px -1px 39px rgba(0, 0, 0, 0.391);
@@ -37,9 +37,11 @@ const ProductPage = () => {
             <ProductPageS>
                   <ImageS src={data.img} alt=''/>
                   <ProductInfo>
-                        <div>
+                        <div style={{display:"flex", flexDirection: "column", gap: "20px"}}>
                               <h2>{data.name}</h2>
                               <span>{data.description}</span>
+                              <Button variant='outlined'>Заказать</Button>
+
                         </div>
                     <Rating name='pruduct-rating' value={data.rating} />
                   </ProductInfo>
